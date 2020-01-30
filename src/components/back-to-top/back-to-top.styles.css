@@ -1,0 +1,27 @@
+.back-to-top {
+  clear: both;
+  display: block;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.back-to-top .arrow {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.back-to-top a {
+  color: whitesmoke;
+  font-family: vcsm;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2rem;
+  text-transform: normal;
+  text-decoration: none;
+}
+
+.preserve-whitespace {
+  white-space: pre-wrap;
+}
