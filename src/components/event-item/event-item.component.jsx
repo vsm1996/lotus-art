@@ -3,7 +3,7 @@ import './event-item.styles.css'
 const EventItem = ({event}) => {
     return (
         <div>
-             <img src={event.img} alt="art desc." className="event-img" />
+            <a href={event.urlLink}><img src={event.img} alt="art desc." className="event-img" /></a>
             <h2>{event.title}</h2>
             <p>{event.date}</p>
             <p>{event.address}</p>

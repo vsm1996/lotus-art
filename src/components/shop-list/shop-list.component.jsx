@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ShopItem from "../shop-item/shop-item.component";
-import PopUp from "../pop-up/pop-up.component";
+
 
 import "./shop-list.styles.css";
 import { firestore } from "../../firebase/firebase.utils";
@@ -49,11 +49,10 @@ class ShopList extends Component {
       <div className="shop-list shop-list-grid">
         {shoplist
           ? shoplist.map((item, i) => (
-              <ShopItem togglePopup={this.togglePopup} key={i} item={item} />
+              <ShopItem show={show} togglePopup={this.togglePopup} key={i} item={item} />
             ))
           : null}
-          {/* {show ? (<p>showing</p>)  : ''} */}
-          <PopUp show={show} togglePopup={this.togglePopup}> Beetlejuice</PopUp>
+          
       </div>
     );
   }
