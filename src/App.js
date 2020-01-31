@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/header/header.component";
 import Shop from "./components/shop/shop.component";
-import Events from "./components/events/event.component";
+import Events from "./components/events/event-list.component";
 import About from "./components/about/about.component";
 import Contact from "./components/contact/contact.component";
 import Footer from "./components/footer/footer.component";

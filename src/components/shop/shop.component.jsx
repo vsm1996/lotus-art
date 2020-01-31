@@ -8,7 +8,6 @@ class Shop extends Component {
     render() {
         return (
             <div className="shop">
-                {/* <h2>Shop</h2> */}
                 <ShopList/>
                 <BackToTop/>
             </div>

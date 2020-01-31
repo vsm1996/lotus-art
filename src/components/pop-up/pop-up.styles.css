@@ -1,96 +1,26 @@
-.popup {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0%;
-    background-color: rgba(0,0,0, 0.5);
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s;
-  
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position:fixed;
+  background: rgba(0, 0, 0, 0.6);
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+  .display-block {
+    display: block;
   }
   
-  .popup__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    background-color: rgba(255, 255, 255, .55);
-    box-shadow: 0 2rem 4rem rgba(0,0,0, .2);
-    border-radius: 3px;
-    display: table;
-    overflow: hidden;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(.25);
-    transition: all .5s .2s;
-    }
-  
-  .popup__left {
-    width: 33.333333%;
-    display: table-cell;
-    }
-  
-  .popup__right {
-    width: 66.6666667%;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 3rem 5rem;
-    }
-  
-  .popup__img {
-      display: block;
-      width: 100%;
-      /* margin-top: 5rem;
-      margin-left: 2rem; */
-      margin: 2rem;
-    }
-  
-  .popup__text {
-      font-size: 1rem;
-      margin-bottom: 4rem;
-  
-      -moz-column-count: 2;
-      -moz-column-gap: 4rem; /*1em = 14px;*/
-      -moz-column-rule: 1px solid rgb(39, 39, 39);
-  
-      column-count: 2;
-      column-gap: 4rem; /*1em = 14px;*/
-      column-rule: 1px solid rgb(39, 39, 39);
-  
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-      -webkit-hyphens: auto;
-      hyphens: auto;
-    }
-  
-    /* Open states */
-  .popup:target {
-    opacity: 1;
-    visibility: visible;
-    }
-  
-  .popup:target .popup__content {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  
-  .popup__close:link, .popup:visited {
-    color: rgb(39, 39, 39);
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    font-size: 3rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: all .2s;
-    line-height: 1;
-  }
-  
-  .popup:hover {
-    /* color: #55c57a; */
+  .display-none {
+    display: none;
   }
