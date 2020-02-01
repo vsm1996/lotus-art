@@ -1,22 +1,20 @@
 import React, { Component } from "react";
-import { firestore } from "../../firebase/firebase.utils";
+import {connect } from 'react-redux'
 
-import "./event-list.styles.css";
 import EventItem from "../event-item/event-item.component";
 
-class Events extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      events: []
-    };
-  }
+import { firestore } from "../../firebase/firebase.utils";
+import  {getEvents} from '../../redux/events/events.actions'
 
+import "./event-list.styles.css";
+
+class Events extends Component {
   componentDidMount() {
     this.getEvents();
   }
 
   getEvents = async () => {
+    const { getEvents } = this.props
     const events = [];
     let eventRefs = firestore.collection("events");
     await eventRefs
@@ -32,11 +30,11 @@ class Events extends Component {
         console.log("Error getting documents");
       });
 
-    this.setState({ events: events });
+    getEvents(events);
   };
 
   render() {
-    const { events } = this.state;
+    const { events } = this.props;
     return (
       <div className="events-container">
         <h1>Events</h1>
@@ -53,4 +51,13 @@ class Events extends Component {
     );
   }
 }
-export default Events;
+
+const mapStateToProps = state => ({
+  events: state.events.events
+})
+
+const matchDispatchToProps = dispatch => ({
+  getEvents: events => dispatch(getEvents(events))
+})
+
+export default connect(mapStateToProps, matchDispatchToProps)(Events);

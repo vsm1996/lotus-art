@@ -1,41 +1,17 @@
 import React, { Component } from "react";
+import {connect} from 'react-redux'
+
 import ShopItem from "../shop-item/shop-item.component";
 
-
 import "./shop-list.styles.css";
-import { firestore } from "../../firebase/firebase.utils";
 
 class ShopList extends Component {
   constructor() {
     super();
     this.state = {
-      show: false,
-      shoplist: []
+      show: false
     };
   }
-
-  componentDidMount() {
-    this.getArt();
-  }
-
-  getArt = async () => {
-    const art = [];
-    let artRefs = firestore.collection("art");
-    await artRefs
-      .get()
-      .then(snapshot => {
-        // console.log(snapshot.docs);
-        snapshot.forEach(doc => {
-          // console.log(doc.id, '=>', doc.data())
-          art.push(doc.data());
-        });
-      })
-      .catch(err => {
-        console.log("Error getting documents");
-      });
-
-    this.setState({ shoplist: art });
-  };
 
   togglePopup = e => {
     e.preventDefault();
@@ -44,7 +20,8 @@ class ShopList extends Component {
   };
 
   render() {
-    const { shoplist,show } = this.state;
+    const { show } = this.state
+    const { shoplist } = this.props;
     return (
       <div className="shop-list shop-list-grid">
         {shoplist
@@ -58,4 +35,8 @@ class ShopList extends Component {
   }
 }
 
-export default ShopList;
+const mapStateToProps = state => ({
+  shoplist: state.shop.shoplist
+})
+
+export default connect(mapStateToProps)(ShopList);
