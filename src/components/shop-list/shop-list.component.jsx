@@ -25,8 +25,8 @@ class ShopList extends Component {
     return (
       <div className="shop-list shop-list-grid">
         {shoplist
-          ? shoplist.map((item, i) => (
-              <ShopItem show={show} togglePopup={this.togglePopup} key={i} item={item} />
+          ? shoplist.map(item => (
+              <ShopItem show={show} togglePopup={this.togglePopup} key={item.id} item={item} />
             ))
           : null}
           

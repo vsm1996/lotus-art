@@ -29,7 +29,9 @@ class App extends Component {
         // console.log(snapshot.docs);
         snapshot.forEach(doc => {
           // console.log(doc.id, '=>', doc.data())
-          art.push(doc.data());
+          let artDoc = doc.data()
+          let artItem = {id: doc.id, ...artDoc}
+          art.push(artItem);
         });
       })
       .catch(err => {
