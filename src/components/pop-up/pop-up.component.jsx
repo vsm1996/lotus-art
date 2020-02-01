@@ -1,5 +1,7 @@
 import React from "react";
 import './pop-up.styles.css'
+import CustomButton from "../custom-button/custom-button.component";
+
 const PopUp = ({togglePopup, show, item}) => {
   const showPopup = show ? "modal display-block" : "modal display-none";
   return (
@@ -10,7 +12,7 @@ const PopUp = ({togglePopup, show, item}) => {
         <h2>{item.desc}</h2>
         <p>{item.size}</p>
         <p>${item.price}</p>
-        <button>Add to Cart</button>
+        <CustomButton>Add To Cart</CustomButton>
       </section>
     </div>
   );
