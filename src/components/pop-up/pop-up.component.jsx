@@ -10,9 +10,9 @@ const PopUp = ({togglePopup, show, item, addItem}) => {
   const showPopup = show ? "modal display-block" : "modal display-none";
   const { title, price, desc, img, size} = item
   return (
-    <div onClick={togglePopup} className={showPopup}>
+    <div className={showPopup}>
       <section className="modal-main">
-        <img className="popup-img" src={img} alt={item.title} />
+        <img className="popup-img" src={img} alt={title} />
         <h1>{title}</h1>
         <h2>{desc}</h2>
         <p>{size}</p>

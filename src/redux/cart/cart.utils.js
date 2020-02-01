@@ -10,6 +10,6 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
         : cartItem
     );
   }
-
+  console.log("KOKUO: ", [...cartItems, {...cartItemToAdd, quantity: 1}])
   return [...cartItems, {...cartItemToAdd, quantity: 1}]
 };
