@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 
 import Header from "./components/header/header.component";
 import Shop from "./components/shop/shop.component";
+import CheckoutPage from './components/checkout/checkout.component'
 import Events from "./components/event-list/event-list.component";
 import About from "./components/about/about.component";
 import Contact from "./components/contact/contact.component";
@@ -47,9 +48,10 @@ class App extends Component {
         <Header/>
         <Switch>
           <Route exact path="/" component={Shop}/>
-          <Route path="/events" component={Events}/>
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
+          <Route exact path="/events" component={Events}/>
+          <Route exact path="/checkout" component={CheckoutPage} />
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/contact" component={Contact}/>
         </Switch>
         <Footer/>
       </div>

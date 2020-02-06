@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import {createStructuredSelector } from 'reselect'
+
+import {selectCartHidden} from '../../redux/cart/cart.selectors'
 
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
@@ -44,8 +47,8 @@ const Header = ({ hidden }) => {
 };
 
 //destructure nested value
-const mapStateToProps = ({ cart: { hidden } }) => ({
-  hidden
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartHidden
 });
 
 export default connect(mapStateToProps)(Header);
