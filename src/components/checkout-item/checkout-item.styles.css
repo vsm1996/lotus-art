@@ -15,12 +15,23 @@
   width: 100%;
   height: 100%;
 }
-.checkout-item .name, .checkout-item .quantity, .checkout-item .price {
+.checkout-item .name,
+.checkout-item .quantity,
+.checkout-item .price {
   width: 23%;
 }
 .checkout-item .quantity {
-  padding-left: 20px;
+  display: flex;
 }
+
+.checkout-item .arrow {
+  cursor: pointer;
+}
+
+.checkout-item .value {
+  margin: 0 11px;
+}
+
 .checkout-item .remove-button {
   padding-left: 12px;
   cursor: pointer;
