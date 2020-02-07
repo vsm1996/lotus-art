@@ -20,3 +20,7 @@
 .cart-dropdown button {
   margin-top: auto;
 }
+
+.cart-dropdown .total {
+  text-align: center;
+}

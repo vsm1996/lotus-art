@@ -13,11 +13,11 @@ const PopUp = ({togglePopup, show, item, addItem}) => {
     <div onClick={togglePopup} className={showPopup}>
       <section className="modal-main">
         <img className="popup-img" src={img} alt={title} />
-        <h1>{title}</h1>
-        <h2>{desc}</h2>
+        <h2>{title}</h2>
+        <h3>{desc}</h3>
         <p>{size}</p>
         <p>${price}</p>
-        <CustomButton onClick={() => addItem(item)}>Add To Cart</CustomButton>
+        <CustomButton className="custom-button" onClick={() => addItem(item)}>Add To Cart</CustomButton>
       </section>
     </div>
   );

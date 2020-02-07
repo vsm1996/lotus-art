@@ -25,7 +25,7 @@ class Contact extends Component {
       const {email, name, message} = this.state
     return (
       <div className="contact-container">
-        <h1>Contact</h1>
+        <h1>Have questions? Email me!</h1>
         <form onSubmit={this.handleSubmit}>
           <FormInput
             type="email"
