@@ -17,6 +17,19 @@ h1 {
   font-size: 1.5rem;
 }
 
+  @media only screen and (max-device-width: 319px) and (-webkit-min-device-pixel-ratio: 2) {
+    .event-list-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-auto-rows: auto;
+      grid-gap: 1rem;
+  
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+
 /* ----------- iPhone 4 and 4S ----------- */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
