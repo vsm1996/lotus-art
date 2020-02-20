@@ -132,3 +132,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin: 0 1rem;
     }
 }
+
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+        .title {
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+    }
