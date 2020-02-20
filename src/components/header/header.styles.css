@@ -1,6 +1,5 @@
-ul {
+.nav-ul {
     display: flex;
-    /* align-content: center; */
     justify-content: space-between;
 }
 
@@ -39,3 +38,28 @@ a {
     align-items: center;
     justify-content: flex-end;
 }
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .header {
+        margin: .25rem auto;
+        font-size: 1.15rem;
+    }
+
+    .nav-ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .options {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .nav-item {
+        margin: 0 .2rem;
+    }
+  }

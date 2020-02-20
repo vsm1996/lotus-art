@@ -1,18 +1,50 @@
 .events-container {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .event-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .event-list-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-auto-rows: auto;
     grid-gap: 1rem;
-  
+
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .event-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+
+    font-weight: 400;
+    font-size: 1rem;
+  }
+} */

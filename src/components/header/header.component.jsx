@@ -14,7 +14,7 @@ const Header = ({ hidden }) => {
   return (
     <div className="header">
       <nav>
-        <ul>
+        <ul className="nav-ul">
           <div className="title">
             <li>
               <Link to="/">
