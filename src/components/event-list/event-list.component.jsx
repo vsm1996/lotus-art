@@ -22,7 +22,7 @@ class Events extends Component {
       .then(snapshot => {
         // console.log(snapshot.docs);
         snapshot.forEach(doc => {
-          console.log(doc.id, "=>", doc.data());
+          // console.log(doc.id, "=>", doc.data());
           events.push(doc.data());
         });
       })
