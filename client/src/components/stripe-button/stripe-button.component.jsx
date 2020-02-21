@@ -6,10 +6,10 @@ import * as emailjs from "emailjs-com";
 const StripeCheckoutButton = ({ price, order }) => {
   const priceForStripe = price * 100;
   // change before going live
-  const publishableKey = "pk_test_TD3bJFY6vKMBXowUkCZphnfe";
+  const publishableKey = "pk_live_45xUwb7UMKxH8QBIuj9jXrxH";
 
   const onToken = token => {
-    console.log("TOKEN: ", token);
+    // console.log("TOKEN: ", token);
     axios({
       url: "payment",
       method: "post",
@@ -20,7 +20,7 @@ const StripeCheckoutButton = ({ price, order }) => {
     })
       .then(response => {
         alert("Sucessful payment");
-        console.log("RESPONSE.DATA.SUCCESS: ", response.data.success);
+        // console.log("RESPONSE.DATA.SUCCESS: ", response.data.success);
         const { receipt_email, receipt_url } = response.data.success;
         const { name, address } = response.data.success.billing_details;
         emailSubmit({ receipt_email, receipt_url, name, address });
