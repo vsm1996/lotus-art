@@ -25,7 +25,7 @@ const About = () => {
       </p>
       <br/>
       <p>
-        If you would like to work with Vanessa, contact her using the contact form on the Contact page.
+        If you would like to work with Vanessa, email her using the form on the Contact page.
       </p>
       </div>
     </div>
