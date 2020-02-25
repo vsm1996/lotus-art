@@ -23,6 +23,7 @@ const About = () => {
         mentorship. Her career has been diverse, from working with e-commerce
         start-ups to major international coding companies.
       </p>
+      <br/>
       <p>
         If you would like to work with Vanessa, contact her using the contact form on the Contact page.
       </p>
