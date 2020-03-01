@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import {connect } from 'react-redux'
+import { connect } from "react-redux";
 
 import EventItem from "../event-item/event-item.component";
 
 import { firestore } from "../../firebase/firebase.utils";
-import  {getEvents} from '../../redux/events/events.actions'
+import { getEvents } from "../../redux/events/events.actions";
 
 import "./event-list.styles.css";
 
@@ -14,7 +14,7 @@ class Events extends Component {
   }
 
   getEvents = async () => {
-    const { getEvents } = this.props
+    const { getEvents } = this.props;
     const events = [];
     let eventRefs = firestore.collection("events");
     await eventRefs
@@ -35,6 +35,7 @@ class Events extends Component {
 
   render() {
     const { events } = this.props;
+
     return (
       <div className="events-container">
         <h1>Events</h1>
@@ -45,7 +46,7 @@ class Events extends Component {
             ))}
           </div>
         ) : (
-          ""
+          <h1>No Events Available!</h1>
         )}
       </div>
     );
@@ -54,10 +55,10 @@ class Events extends Component {
 
 const mapStateToProps = state => ({
   events: state.events.events
-})
+});
 
 const matchDispatchToProps = dispatch => ({
   getEvents: events => dispatch(getEvents(events))
-})
+});
 
 export default connect(mapStateToProps, matchDispatchToProps)(Events);
